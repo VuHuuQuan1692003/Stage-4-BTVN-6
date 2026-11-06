@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rikkei Student Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= THANH TRÊN (TOPBAR) ================= -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-brand">Rikkei Student Admin</div>
+      
+      <!-- Lời chào & avatar người dùng (hiển thị trên màn hình >= 768px) -->
+      <div class="topbar-user">
+        <span class="user-greeting">Chào, Chị Lan</span>
+        <div class="user-avatar" aria-label="Avatar Chị Lan">L</div>
+      </div>
+
+      <!-- Nút menu ba gạch (hiển thị trên màn hình < 768px) -->
+      <button class="topbar-menu-btn" type="button" aria-label="Mở menu điều hướng">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Bố cục thân trang bao gồm Menu bên và Nội dung chính -->
+  <div class="app-layout">
+    
+    <!-- ================= MENU BÊN (SIDEBAR) ================= -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav" aria-label="Điều hướng trang quản trị">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item active">
+            <a href="#tong-quan" class="sidebar-link" aria-current="page">Tổng quan</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#sinh-vien" class="sidebar-link">Sinh viên</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#lop-hoc" class="sidebar-link">Lớp học</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#diem-so" class="sidebar-link">Điểm số</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#cai-dat" class="sidebar-link">Cài đặt</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ================= VÙNG NỘI DUNG CHÍNH (MAIN CONTENT) ================= -->
+    <main class="main-content" id="main-content">
+      <div class="content-container">
+        
+        <!-- Tiêu đề duy nhất cấp 1 của trang -->
+        <h1 class="page-title">Tổng quan</h1>
+
+        <!-- KHỐI THỐNG KÊ (STATS) -->
+        <section class="stats-section" aria-labelledby="stats-heading">
+          <h2 id="stats-heading" class="visually-hidden">Thống kê tổng quan</h2>
+          <div class="stats-grid">
+            
+            <!-- Thẻ 1: Tổng sinh viên -->
+            <article class="stat-card border-purple">
+              <h3 class="stat-label">Tổng sinh viên</h3>
+              <p class="stat-number">1.250</p>
+              <p class="stat-change">+32 trong tháng</p>
+              <a href="#danh-sach-tong" class="stat-link">Xem danh sách</a>
+            </article>
+
+            <!-- Thẻ 2: Đang học -->
+            <article class="stat-card border-green">
+              <h3 class="stat-label">Đang học</h3>
+              <p class="stat-number">1.080</p>
+              <p class="stat-change">86% tổng số</p>
+              <a href="#danh-sach-dang-hoc" class="stat-link">Xem danh sách</a>
+            </article>
+
+            <!-- Thẻ 3: Bảo lưu -->
+            <article class="stat-card border-amber">
+              <h3 class="stat-label">Bảo lưu</h3>
+              <p class="stat-number">96</p>
+              <p class="stat-change">+5 trong tháng</p>
+              <a href="#danh-sach-bao-luu" class="stat-link">Xem danh sách</a>
+            </article>
+
+            <!-- Thẻ 4: Nghỉ học -->
+            <article class="stat-card border-red">
+              <h3 class="stat-label">Nghỉ học</h3>
+              <p class="stat-number">74</p>
+              <p class="stat-change">-3 trong tháng</p>
+              <a href="#danh-sach-nghi-hoc" class="stat-link">Xem danh sách</a>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- KHỐI DANH SÁCH SINH VIÊN (STUDENT LIST) -->
+        <section class="students-section" aria-labelledby="students-heading">
+          <div class="section-card">
+            <h2 id="students-heading" class="section-title">Sinh viên mới nhập học</h2>
+            
+            <ul class="student-list">
+              <!-- Sinh viên 1 -->
+              <li class="student-item">
+                <div class="student-avatar" aria-hidden="true">A</div>
+                <div class="student-meta">
+                  <span class="student-name">Nguyễn Văn An</span>
+                  <span class="student-code-class">SV2024001 - CNTT01</span>
+                </div>
+                <div class="student-email">an.nv@rikkei.example</div>
+                <div class="student-status">
+                  <span class="badge badge-success">Đang học</span>
+                </div>
+              </li>
+
+              <!-- Sinh viên 2 -->
+              <li class="student-item">
+                <div class="student-avatar" aria-hidden="true">H</div>
+                <div class="student-meta">
+                  <span class="student-name">Trần Thu Hà</span>
+                  <span class="student-code-class">SV2024002 - KT02</span>
+                </div>
+                <div class="student-email">ha.tt@rikkei.example</div>
+                <div class="student-status">
+                  <span class="badge badge-success">Đang học</span>
+                </div>
+              </li>
+
+              <!-- Sinh viên 3 -->
+              <li class="student-item">
+                <div class="student-avatar" aria-hidden="true">Q</div>
+                <div class="student-meta">
+                  <span class="student-name">Lê Minh Quân</span>
+                  <span class="student-code-class">SV2024003 - CNTT01</span>
+                </div>
+                <div class="student-email">quan.lm@rikkei.example</div>
+                <div class="student-status">
+                  <span class="badge badge-warning">Bảo lưu</span>
+                </div>
+              </li>
+
+              <!-- Sinh viên 4 -->
+              <li class="student-item">
+                <div class="student-avatar" aria-hidden="true">M</div>
+                <div class="student-meta">
+                  <span class="student-name">Phạm Ngọc Mai</span>
+                  <span class="student-code-class">SV2024004 - KT02</span>
+                </div>
+                <div class="student-email">mai.pn@rikkei.example</div>
+                <div class="student-status">
+                  <span class="badge badge-success">Đang học</span>
+                </div>
+              </li>
+
+              <!-- Sinh viên 5 -->
+              <li class="student-item">
+                <div class="student-avatar" aria-hidden="true">B</div>
+                <div class="student-meta">
+                  <span class="student-name">Đỗ Quốc Bảo</span>
+                  <span class="student-code-class">SV2024005 - CNTT03</span>
+                </div>
+                <div class="student-email">bao.dq@rikkei.example</div>
+                <div class="student-status">
+                  <span class="badge badge-danger">Nghỉ học</span>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+
+        <!-- KHỐI FORM THÊM SINH VIÊN (ADD STUDENT FORM) -->
+        <section class="add-student-section" aria-labelledby="form-heading">
+          <div class="section-card">
+            <h2 id="form-heading" class="section-title">Thêm nhanh sinh viên</h2>
+            
+            <form class="student-form" action="#" method="post" onsubmit="event.preventDefault();">
+              <div class="form-grid">
+                
+                <!-- Ô nhập Họ tên -->
+                <div class="form-group">
+                  <label for="fullname" class="form-label">Họ tên</label>
+                  <input 
+                    type="text" 
+                    id="fullname" 
+                    name="fullname" 
+                    class="form-control" 
+                    placeholder="Nguyễn Văn A" 
+                    required
+                  >
+                </div>
+
+                <!-- Ô nhập Mã SV -->
+                <div class="form-group">
+                  <label for="student-id" class="form-label">Mã SV</label>
+                  <input 
+                    type="text" 
+                    id="student-id" 
+                    name="student-id" 
+                    class="form-control" 
+                    placeholder="SV2024006" 
+                    required
+                  >
+                </div>
+
+                <!-- Ô chọn Lớp -->
+                <div class="form-group">
+                  <label for="class-name" class="form-label">Lớp</label>
+                  <div class="select-wrapper">
+                    <select id="class-name" name="class-name" class="form-control form-select">
+                      <option value="CNTT01" selected>CNTT01</option>
+                      <option value="KT02">KT02</option>
+                      <option value="CNTT03">CNTT03</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Ô nhập Email -->
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-control" 
+                    placeholder="ban@rikkei.example" 
+                    required
+                  >
+                </div>
+
+              </div>
+
+              <!-- Nút Thêm sinh viên -->
+              <div class="form-actions">
+                <button type="submit" class="btn-submit">Thêm sinh viên</button>
+              </div>
+            </form>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= CHÂN TRANG (FOOTER) ================= -->
+      <footer class="footer">
+        <p class="footer-text">Rikkei Student Admin - Dữ liệu minh họa</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
